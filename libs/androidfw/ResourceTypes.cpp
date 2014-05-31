@@ -3818,7 +3818,7 @@ bool ResTable::getResourceName(uint32_t resID, bool allowUtf8, resource_name* ou
         if (Res_GETPACKAGE(resID)+1 == 0) {
             ALOGW("No package identifier when getting name for resource number 0x%08x", resID);
         } else {
-            ALOGW("No known package when getting name for resource number 0x%08x", resID);
+            ALOGV("No known package when getting name for resource number 0x%08x", resID);
         }
         return false;
     }
