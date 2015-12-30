@@ -32,4 +32,7 @@
   <java-symbol type="string" name="reboot_system" />
   <java-symbol type="string" name="reboot_progress" />
 
+  <!-- Config IME switcher -->
+  <java-symbol type="bool" name="config_show_IMESwitcher" />
+
 </resources>
