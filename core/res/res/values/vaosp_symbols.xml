@@ -77,4 +77,7 @@
    <!-- Doze invert -->
   <java-symbol type="bool" name="config_invert_colors_on_doze" />
 
+  <!-- Hardware key rebinding -->
+  <java-symbol type="integer" name="config_deviceHardwareKeys" />
+
 </resources>
