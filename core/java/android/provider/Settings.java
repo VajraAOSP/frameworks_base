@@ -3637,6 +3637,12 @@ public final class Settings {
         public static final String DIM_NAV_BUTTONS_TOUCH_ANYWHERE = "dim_nav_buttons_touch_anywhere";
 
         /**
+         * Whether to show the IME arrows in the status bar
+         * @hide
+         */
+        public static final String STATUS_BAR_IME_ARROWS = "status_bar_ime_arrows";
+
+        /**
          * Automatic keyboard rotation timeout.  0 to disable completely.
          * @hide
          */
