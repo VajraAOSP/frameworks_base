@@ -6241,6 +6241,12 @@ public final class Settings {
         public static final String ADVANCED_REBOOT = "advanced_reboot";
 
         /**
+         * Whether to use the custom quick unlock screen control
+         * @hide
+         */
+        public static final String LOCKSCREEN_QUICK_UNLOCK_CONTROL = "lockscreen_quick_unlock_control";
+
+        /**
          * Names of the service components that the current user has explicitly allowed to
          * see all of the user's notifications, separated by ':'.
          *
@@ -6449,6 +6455,7 @@ public final class Settings {
             DOUBLE_TAP_TO_WAKE,
             CAMERA_GESTURE_DISABLED,
             PRIVACY_GUARD_DEFAULT,
+            LOCKSCREEN_QUICK_UNLOCK_CONTROL
         };
 
         /**
