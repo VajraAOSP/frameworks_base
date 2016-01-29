@@ -61,6 +61,7 @@ public class TunerFragment extends PreferenceFragment implements OnPreferenceCha
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
     private static final String RECENTS_CLEAR_ALL_DISMISS_ALL = "recents_clear_all_dismiss_all";
     private static final String RECENTS_SHOW_SEARCH_BAR = "recents_show_search_bar";
+    private static final String RECENT_SHOW_RUNNING_TASKS = "recent_show_running_tasks";
 
     private static final String QUICK_PULLDOWN = "quick_pulldown";
     private static final String QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
@@ -81,6 +82,7 @@ public class TunerFragment extends PreferenceFragment implements OnPreferenceCha
     private ListPreference mRecentsClearAllLocation;
     private SwitchPreference mRecentsClearAllDimissAll;
     private SwitchPreference mRecentsShowSearchBar;
+    private SwitchPreference mRecentsShowRunningTasks;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -170,6 +172,12 @@ public class TunerFragment extends PreferenceFragment implements OnPreferenceCha
             Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER, 1, UserHandle.USER_CURRENT);
         mShowBrightnessSlider.setChecked(showBrightnessSlider == 1);
         mShowBrightnessSlider.setOnPreferenceChangeListener(this);
+
+        mRecentsShowRunningTasks = (SwitchPreference) findPreference(RECENT_SHOW_RUNNING_TASKS);
+        int recentsShowRunningTasks = Settings.System.getIntForUser(resolver,
+                Settings.System.RECENT_SHOW_RUNNING_TASKS, 0, UserHandle.USER_CURRENT);
+        mRecentsShowRunningTasks.setChecked(recentsShowRunningTasks == 1);
+        mRecentsShowRunningTasks.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -268,6 +276,10 @@ public class TunerFragment extends PreferenceFragment implements OnPreferenceCha
         } else if (preference == mShowBrightnessSlider) {
             Settings.Secure.putIntForUser(resolver, Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER,
                     mShowBrightnessSlider.isChecked() ? 0 : 1, UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mRecentsShowRunningTasks) {
+            Settings.System.putIntForUser(resolver, Settings.System.RECENT_SHOW_RUNNING_TASKS,
+                    mRecentsShowRunningTasks.isChecked() ? 0 : 1, UserHandle.USER_CURRENT);
             return true;
         }
         return false;
