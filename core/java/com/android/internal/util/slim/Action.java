@@ -146,6 +146,12 @@ public class Action {
             } else if (action.equals(ActionConstants.ACTION_NOWONTAP)) {
                 try {
                     barService.startAssist(new Bundle());
+            } else if (action.equals(ActionConstants.ACTION_SMART_PULLDOWN)) {
+                if (isKeyguardShowing && isKeyguardSecure) {
+                    return;
+                }
+                try {
+                    barService.toggleSmartPulldown();
                 } catch (RemoteException e) {}
             } else if (action.equals(ActionConstants.ACTION_LAST_APP)) {
                 if (isKeyguardShowing) {
