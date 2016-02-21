@@ -57,6 +57,8 @@ public class TunerFragment extends PreferenceFragment implements OnPreferenceCha
     private static final String STATUS_BAR_BATTERY_STYLE_HIDDEN = "4";
     private static final String STATUS_BAR_BATTERY_STYLE_TEXT = "6";
 
+    private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
+
     private static final String SHOW_CLEAR_ALL_RECENTS = "show_clear_all_recents";
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
     private static final String RECENTS_CLEAR_ALL_DISMISS_ALL = "recents_clear_all_dismiss_all";
@@ -78,6 +80,7 @@ public class TunerFragment extends PreferenceFragment implements OnPreferenceCha
     private ListPreference mNumColumns;
 
     private SwitchPreference mShowBrightnessSlider;
+    private SwitchPreference mStatusbarBrightnessControl;
 
     private int mbatteryStyle;
     private int mbatteryShowPercent;
@@ -192,6 +195,12 @@ public class TunerFragment extends PreferenceFragment implements OnPreferenceCha
         mShowBrightnessSlider.setChecked(showBrightnessSlider == 1);
         mShowBrightnessSlider.setOnPreferenceChangeListener(this);
 
+        mStatusbarBrightnessControl = (SwitchPreference) findPreference(STATUS_BAR_BRIGHTNESS_CONTROL);
+        int statusbarBrightnessControl = Settings.System.getIntForUser(resolver,
+            Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL, 0, UserHandle.USER_CURRENT);
+        mStatusbarBrightnessControl.setChecked(statusbarBrightnessControl == 1);
+        mStatusbarBrightnessControl.setOnPreferenceChangeListener(this);
+
         mRecentsShowRunningTasks = (SwitchPreference) findPreference(RECENT_SHOW_RUNNING_TASKS);
         int recentsShowRunningTasks = Settings.System.getIntForUser(resolver,
                 Settings.System.RECENT_SHOW_RUNNING_TASKS, 0, UserHandle.USER_CURRENT);
@@ -273,6 +282,10 @@ public class TunerFragment extends PreferenceFragment implements OnPreferenceCha
             Settings.Secure.putIntForUser(resolver, Settings.Secure.QS_NUM_TILE_COLUMNS,
                     numColumns, UserHandle.USER_CURRENT);
             updateNumColumnsSummary(numColumns);
+            return true;
+        } else if (preference == mStatusbarBrightnessControl) {
+            Settings.System.putIntForUser(resolver, Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL,
+                    mStatusbarBrightnessControl.isChecked() ? 0 : 1, UserHandle.USER_CURRENT);
             return true;
         } else if (preference == mRecentsClearAll) {
             Settings.System.putIntForUser(resolver, Settings.System.SHOW_CLEAR_ALL_RECENTS,

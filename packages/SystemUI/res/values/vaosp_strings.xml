@@ -219,4 +219,8 @@
     <string name="accessibility_quick_settings_network_adb_changed_off">ADB over network turned off.</string>
     <string name="accessibility_quick_settings_network_adb_changed_on">ADB over network turned on.</string>
 
+    <!-- Statusbar brightness control -->
+    <string name="status_bar_toggle_brightness">Brightness control</string>
+    <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
+
 </resources>
