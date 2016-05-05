@@ -39,9 +39,6 @@
   <java-symbol type="drawable" name="ic_audio_notification_mute_new" />
   <java-symbol type="drawable" name="ic_audio_notification_mute_alpha" />
 
-   <!-- Doze invert -->
-  <java-symbol type="bool" name="config_invert_colors_on_doze" />
-
   <!-- Config Power Menu -->
   <java-symbol type="drawable" name="ic_lock_power_off_alpha" />
   <java-symbol type="drawable" name="ic_lock_reboot_alpha" />
@@ -76,5 +73,8 @@
   <java-symbol type="drawable" name="ic_shortcut_action_search" />
   <java-symbol type="drawable" name="ic_shortcut_action_auto_rotate" />
   <java-symbol type="drawable" name="ic_shortcut_action_volume_panel" />
+
+   <!-- Doze invert -->
+  <java-symbol type="bool" name="config_invert_colors_on_doze" />
 
 </resources>
