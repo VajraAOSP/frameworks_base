@@ -108,4 +108,7 @@
   <java-symbol type="drawable" name="ic_shortcut_action_auto_rotate" />
   <java-symbol type="drawable" name="ic_shortcut_action_volume_panel" />
 
+  <!-- lockscreen Wallpaper -->
+  <java-symbol type="anim" name="lock_screen_wallpaper_exit_noop" />
+
 </resources>
