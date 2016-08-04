@@ -3123,7 +3123,9 @@ public class WindowManagerService extends IWindowManager.Stub
             }
 
             if (attrs != null) {
+                Binder.restoreCallingIdentity(origId);
                 mPolicy.adjustWindowParamsLw(attrs);
+                origId = Binder.clearCallingIdentity();
             }
 
             // if they don't have the permission, mask out the status bar bits
