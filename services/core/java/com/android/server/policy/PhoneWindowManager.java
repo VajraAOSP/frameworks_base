@@ -130,6 +130,9 @@ import java.io.PrintWriter;
 import java.util.HashSet;
 import java.util.List;
 
+import java.util.Random;
+import android.text.Html;
+
 import static android.view.WindowManager.LayoutParams.*;
 import static android.view.WindowManagerPolicy.WindowManagerFuncs.LID_ABSENT;
 import static android.view.WindowManagerPolicy.WindowManagerFuncs.LID_OPEN;
@@ -6191,7 +6194,13 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 if (always && (currentPackageName != null)) {
                     // Only display the current package name if the main message says "Optimizing app N of M".
                     // We don't want to do this when the message says "Starting apps" or "Finishing boot", etc.
-                    mBootMsgDialog.setMessage(msg + "\n" + currentPackageName);
+                     // Calculate random text color
+                     Random rand = new Random();
+                     String randomColor = Integer.toHexString(rand.nextInt(0xFFFFFF) & 0xFCFCFC );
+                     mBootMsgDialog.setMessage(Html.fromHtml(msg +
+                                                             "<br><b><font color=\"#" + randomColor + "\">" +
+                                                             currentPackageName +
+                                                             "</b></font>"));
                 }
                 else {
                     mBootMsgDialog.setMessage(msg);
