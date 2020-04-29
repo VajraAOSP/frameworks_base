@@ -111,13 +111,4 @@
   <!-- lockscreen Wallpaper -->
   <java-symbol type="anim" name="lock_screen_wallpaper_exit_noop" />
 
-  <!-- Notification and battery light -->
-  <java-symbol type="bool" name="config_intrusiveNotificationLed" />
-  <java-symbol type="bool" name="config_multiColorNotificationLed" />
-  <java-symbol type="bool" name="config_intrusiveBatteryLed" />
-  <java-symbol type="bool" name="config_multiColorBatteryLed" />
-  <java-symbol type="bool" name="config_ledCanPulse" />
-  <java-symbol type="array" name="notification_light_package_mapping" />
-  <java-symbol type="array" name="config_notificationNoAlertsVibePattern" />
-
 </resources>
