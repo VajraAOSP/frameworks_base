@@ -292,6 +292,7 @@ public class TunerFragment extends PreferenceFragment implements OnPreferenceCha
         } else if (preference == mRecentsShowSearchBar) {
             Settings.System.putIntForUser(resolver, Settings.System.RECENTS_SHOW_SEARCH_BAR,
                     mRecentsShowSearchBar.isChecked() ? 0 : 1, UserHandle.USER_CURRENT);
+            return true;
         } else if (preference == mQuickPulldown) {
             int quickPulldownValue = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(resolver, Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
