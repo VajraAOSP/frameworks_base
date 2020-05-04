@@ -402,7 +402,7 @@
     <string name="volumeui_notification_title" msgid="4906770126345910955">"<xliff:g id="APP_NAME">%1$s</xliff:g> rappresenta la finestra di dialogo relativa al volume"</string>
     <string name="volumeui_notification_text" msgid="1826889705095768656">"Tocca per ripristinare l\'originale."</string>
     <string name="managed_profile_foreground_toast" msgid="5421487114739245972">"Stai utilizzando il profilo di lavoro"</string>
-    <string name="system_ui_tuner" msgid="708224127392452018">"Sintetizzatore interfaccia utente di sistema"</string>
+    <string name="system_ui_tuner" msgid="708224127392452018">"Altre opzioni"</string>
     <string name="show_battery_percentage" msgid="5444136600512968798">"Mostra percentuale batteria incorporata"</string>
     <string name="show_battery_percentage_summary" msgid="3215025775576786037">"Mostra la percentuale di carica della batteria nell\'icona della barra di stato quando non è in carica"</string>
     <string name="quick_settings" msgid="10042998191725428">"Impostazioni rapide"</string>
