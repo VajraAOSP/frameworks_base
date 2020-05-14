@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2020 VajraAOSP Lusty & Gorgeous Software, Ltd.
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Quick settings options -->
+    <string name="qs_panel_title">Opzioni settaggi veloci</string>
+    <string name="qs_tiles_title">Scegli i settaggi veloci</string>
+    <!-- Number of tiles per row -->
+    <string name="qs_num_columns_title">Numero di settaggi per riga</string>
+    <string name="qs_num_columns_showing">Mostra %1$s settaggi per riga</string>
+    <string name="qs_num_columns_entries_three">tre</string>
+    <string name="qs_num_columns_entries_four">quattro</string>
+    <string name="qs_num_columns_entries_five">cinque</string>
+
+    <!-- Quick pulldown -->
+    <string name="quick_pulldown_title">Quick pulldown</string>
+    <string name="quick_pulldown_summary">Uno swipe del %1$s della barra di stato mostra i settaggi veloci</string>
+    <string name="quick_pulldown_off">Off</string>
+    <string name="quick_pulldown_summary_right">lato destro</string>
+    <string name="quick_pulldown_right">lato destro</string>
+    <string name="quick_pulldown_summary_left">lato sinistro</string>
+    <string name="quick_pulldown_left">lato sinistro</string>
+    <string name="quick_pulldown_always">sempre</string>
+    <string name="quick_pulldown_summary_always">Mostra sempre i settaggi veloci in caso di swipe della barra di stato</string>
+
+    <!-- Smart Pulldown -->
+    <string name="smart_pulldown_title">Smart pulldown</string>
+    <string name="smart_pulldown_off">Off</string>
+    <string name="smart_pulldown_dismissable">non dismissibili</string>
+    <string name="smart_pulldown_summary">Apri i settaggi veloci quando ci sono notifiche %1$s presenti</string>
+    <string name="smart_pulldown_persistent">non persistenti</string>
+    <string name="smart_pulldown_all">né dismissibili né persistenti</string>
+
+    <string name="qs_brightness_slider_title">Cursore della luminosità</string>
+
+    <string name="status_bar_category">Opzioni barra di stato</string>
+    <string name="status_bar_icons">Icone della barra di stato</string>
+
+    <!-- Smart PullDown Warning -->
+    <string name="smart_pulldown_disabled">Smart pulldown is disabled</string>
+
+    <!-- Battery icon options -->
+    <string name="battery_icon_options_title">Opzioni icona batteria</string>
+
+    <!-- Settings - Battery Style -->
+    <string name="status_bar_battery_style_title">Stile dell\'icona della batteria</string>
+    <string name="status_bar_battery_style_icon_portrait">Icona in piedi</string>
+    <string name="status_bar_battery_style_icon_landscape">Icona sdraiata</string>
+    <string name="status_bar_battery_style_circle">Icona circolare</string>
+    <string name="status_bar_battery_style_dotted_circle">Icona circolare a puntini</string>
+    <string name="status_bar_battery_style_text">Icona di solo testo</string>
+    <string name="status_bar_battery_style_hidden">Icona non visibile</string>
+
+    <!-- Settings - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Mostra la percentuale di carica</string>
+    <string name="status_bar_battery_percentage_dialog_title">Percentuale di carica</string>
+    <string name="status_bar_battery_percentage_default">Non visibile (default)</string>
+    <string name="status_bar_battery_percentage_text_inside">Dentro l\'icona</string>
+    <string name="status_bar_battery_percentage_text_next">A fianco dell\'icona</string>
+
+    <!-- Recent apps options -->
+    <string name="recents_only_running_title">Solo attività in funzione</string>
+    <string name="recents_only_running_summary">Mostra nello schermo recenti solamente le attività in funzionamento</string>
+
+    <string name="clear_recents">Cancella tutti i recenti</string>
+    <string name="recents_options_title">Opzioni attività recenti</string>
+    <string name="show_clear_all_recents_button_title">Bottone cancella tutto</string>
+    <string name="show_clear_all_recents_button_summary">Mostra il bottone per cancellare tutto</string>
+    <string name="recents_clear_all_location_title">Posizione del controllo</string>
+    <string name="recents_clear_all_location_top_right">In alto a destra</string>
+    <string name="recents_clear_all_location_top_left">In alto a sinistra</string>
+    <string name="recents_clear_all_location_top_center">In alto al centro</string>
+    <string name="recents_clear_all_location_bottom_right">In basso a destra</string>
+    <string name="recents_clear_all_location_bottom_left">In basso a sinistra</string>
+    <string name="recents_clear_all_location_bottom_center">In basso al centro</string>
+    <string name="recents_clear_all_dismiss_all_title">Cancella tutto</string>
+    <string name="recents_clear_all_dismiss_all_summary">Includi l\'attività in esecuzione quando cancelli tutto</string>
+
+    <!-- Search bar in recents -->
+    <string name="recents_searchbar_title">Barra di ricerca</string>
+    <string name="recents_searchbar_summary">Mostra la barra di ricerca nello schermo attività recenti</string>
+
+    <!-- Statusbar brightness control -->
+    <string name="status_bar_toggle_brightness">Controllo della luminosità</string>
+    <string name="status_bar_toggle_brightness_summary">Regola la luminosità tramite un movimento orizzontale sulla barra di stato</string>
+
+</resources>
